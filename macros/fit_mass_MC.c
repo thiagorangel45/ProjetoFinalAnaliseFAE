@@ -16,9 +16,9 @@
 #include <iostream>
 #include <vector>
 
-void analise()
+void fit_mass_MC()
 {
-    TFile *file = new TFile("MC.root");
+    TFile *file = new TFile("/Users/thiagorangel/UERJ/Introducao_Analise_de_Dados_FAE/Projeto_Final_FAE/Data/MC.root");
     TTree *tree = (TTree*)file->Get("Electrons");
     TH1F *dielectron_data_h = new TH1F("dielelectron_data_h",
                                        "; ; Events / 0.25 GeV",

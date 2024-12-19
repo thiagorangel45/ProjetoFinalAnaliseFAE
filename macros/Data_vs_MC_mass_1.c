@@ -104,15 +104,15 @@ void plotComparison(TH1F* dielectron_data_h, TH1F* dielectron_mc_h)
     c1->SaveAs("Data_vs_MC_Comparison.png");
 }
 
-void analise3()
+void Data_vs_MC_mass_1()
 {
     // Criar os histogramas para Dados e MC
     TH1F *dielectron_data_h = new TH1F("dielelectron_data_h", "; ; Eventos / 0.25 GeV", 100, 80, 100);
     TH1F *dielectron_mc_h = new TH1F("dielelectron_mc_h", "; ; Eventos / 0.25 GeV", 100, 80, 100);
 
     // Processar os dados de MC e Data
-    processData("MC.root", dielectron_mc_h);
-    processData("Data.root", dielectron_data_h);
+    processData("/Users/thiagorangel/UERJ/Introducao_Analise_de_Dados_FAE/Projeto_Final_FAE/Data/MC.root", dielectron_mc_h);
+    processData("/Users/thiagorangel/UERJ/Introducao_Analise_de_Dados_FAE/Projeto_Final_FAE/Data/Data.root", dielectron_data_h);
 
     // Plotar a comparação entre Dados e MC
     plotComparison(dielectron_data_h, dielectron_mc_h);
